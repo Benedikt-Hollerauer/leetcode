@@ -1,12 +1,15 @@
 package easy
 
+import scala.concurrent.Future
+
 // https://leetcode.com/problems/two-sum/
 
 object `1_TwoSum`:
 
     def twoSum(nums: Array[Int], target: Int): Array[Int] =
-        def helper(acc: Int): Array[Int] =
-            if(nums(acc + 1) + nums(acc) == target) Array(acc, nums.indexOf(acc + 1))
-            else helper(acc + 1)
-
-        helper(0)
+        nums.flatMap(x =>
+            nums.tail.flatMap(y =>  // the tail just works for the first iteration, because only the first element is removed
+                if(x + y == target) Array(nums.indexOf(x), nums.indexOf(y))
+                else Array(789)
+            ).filter(x => x != 789)
+        )
