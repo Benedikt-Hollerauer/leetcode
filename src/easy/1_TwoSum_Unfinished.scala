@@ -4,7 +4,7 @@ package easy
 
 object `1_TwoSum_Unfinished`:
 
-    def twoSum(nums: Array[Int], target: Int): Array[Int] =
+    def twoSum(nums: Array[Int], target: Int): Array[Int] = {
         nums.flatMap(x =>
             nums.drop(nums.indexOf(x))
                 .flatMap(y =>
@@ -15,3 +15,4 @@ object `1_TwoSum_Unfinished`:
                     else Array(999)
                 ).filter(x => x != 999)
         )
+    }

@@ -4,6 +4,7 @@ package easy
 
 object `9_PalindromeNumber_Finished`:
 
-    def isPalindrome(x: Int): Boolean =
+    def isPalindrome(x: Int): Boolean = {
         if(x.toString == x.toString.reverse) true
         else false
+    }

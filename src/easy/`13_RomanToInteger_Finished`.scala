@@ -6,7 +6,7 @@ import scala.annotation.tailrec
 
 object `13_RomanToInteger_Finished`:
 
-    def romanToInt(s: String): Int =
+    def romanToInt(s: String): Int = {
         @tailrec
         def helper(it: List[Int], acc: Int = 0): Int =
             it match {
@@ -27,3 +27,4 @@ object `13_RomanToInteger_Finished`:
                 case 'M' => 1000
             }).toList
         )
+    }
