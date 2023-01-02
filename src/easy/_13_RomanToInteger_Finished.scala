@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 // https://leetcode.com/problems/roman-to-integer/
 
-object `13_RomanToInteger_Finished`:
+object _13_RomanToInteger_Finished:
 
     def romanToInt(s: String): Int = {
         @tailrec
