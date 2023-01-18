@@ -1,5 +1,7 @@
 package easy
 
+import scala.annotation.tailrec
+
 // https://leetcode.com/problems/merge-two-sorted-lists/
 
 object _21_MergeTwoSortedLists_Finished:
@@ -10,6 +12,7 @@ object _21_MergeTwoSortedLists_Finished:
     }
 
     def mergeTwoLists(list1: ListNode, list2: ListNode): ListNode = {
+        @tailrec
         def helper(list1: ListNode, list2: ListNode, acc: List[Int]): ListNode =
             if(list1 != null) helper(list1.next, list2, list1.x :: acc)
             else if(list2 != null) helper(list1, list2.next, list2.x :: acc)
