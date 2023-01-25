@@ -1,6 +1,6 @@
 package easy
 
-class _66_PlusOne_Current:
+object _66_PlusOne_Current:
 
     def plusOne(digits: Array[Int]): Array[Int] = {
         ???
