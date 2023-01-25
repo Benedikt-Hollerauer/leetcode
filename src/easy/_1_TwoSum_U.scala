@@ -2,7 +2,7 @@ package easy
 
 // https://leetcode.com/problems/two-sum/
 
-object _1_TwoSum_Unfinished:
+object _1_TwoSum_U:
 
     def twoSum(nums: Array[Int], target: Int): Array[Int] = {
         nums.flatMap(x =>

@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 // https://leetcode.com/problems/longest-common-prefix/
 
-object _14_LongestCommonPrefix_Finished:
+object _14_LongestCommonPrefix_F:
 
     def longestCommonPrefix(strs: Array[String]): String = {
         @tailrec

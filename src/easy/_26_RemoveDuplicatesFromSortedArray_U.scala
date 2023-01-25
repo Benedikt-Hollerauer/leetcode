@@ -2,7 +2,7 @@ package easy
 
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
-object _26_RemoveDuplicatesFromSortedArray_Unfinished:
+object _26_RemoveDuplicatesFromSortedArray_U:
 
     def removeDuplicates(nums: Array[Int]): Int = {
         def helper(nums: Array[Int]): Array[Int] =

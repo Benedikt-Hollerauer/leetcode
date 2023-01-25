@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 // https://leetcode.com/problems/merge-two-sorted-lists/
 
-object _21_MergeTwoSortedLists_Finished:
+object _21_MergeTwoSortedLists_F:
 
     class ListNode(_x: Int = 0, _next: ListNode = null) {
         var next: ListNode = _next

@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 // https://leetcode.com/problems/valid-parentheses/
 
-object _20_ValidParentheses_Finished:
+object _20_ValidParentheses_F:
 
     def isValid(s: String): Boolean = {
         @tailrec
