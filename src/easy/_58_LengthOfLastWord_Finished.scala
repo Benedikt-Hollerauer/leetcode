@@ -2,7 +2,7 @@ package easy
 
 // https://leetcode.com/problems/length-of-last-word/
 
-object _58_LengthOfLastWord_Current:
+object _58_LengthOfLastWord_Finished:
 
     def lengthOfLastWord(s: String): Int = {
         s.trim
