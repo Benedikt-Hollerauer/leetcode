@@ -5,5 +5,8 @@ package easy
 object _58_LengthOfLastWord_Current:
 
     def lengthOfLastWord(s: String): Int = {
-        ???
+        s.trim
+            .reverse
+            .takeWhile(!_.isWhitespace)
+            .length
     }
