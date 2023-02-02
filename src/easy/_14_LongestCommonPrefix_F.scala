@@ -1,24 +1,21 @@
 package easy
 
 import scala.annotation.tailrec
+import scala.util.Random
 
 // https://leetcode.com/problems/longest-common-prefix/
 
-object _14_LongestCommonPrefix_F:
+object _14_LongestCommonPrefix_F extends App:
 
     def longestCommonPrefix(strs: Array[String]): String = {
-        @tailrec
-        def helper(it: List[String], commonPrefix: String): String =
-            it.reduce((x, y) =>
-                if(x.isEmpty | y.isEmpty) "-"
-                else if(x.head == y.head) x.head.toString
-                else "-"
-            ) match {
-                case "-" => commonPrefix
-                case commonChar => helper(it.map(_.tail), commonPrefix + commonChar)
-            }
-
-        if(strs.contains("")) ""
-        else if(strs.length <= 1) strs.head
-        else helper(strs.toList, "")
+        strs.toList
+            .map(x => x.dropRight(x.length - strs.min.length).toList)
+            .transpose
+            .map(_.reduce((x, y) =>
+                if(x == y) x
+                else '-'
+            )).takeWhile(_ != '-')
+            .mkString
     }
+
+    println(longestCommonPrefix(Array("ia", "ia", "iaiiii")))
