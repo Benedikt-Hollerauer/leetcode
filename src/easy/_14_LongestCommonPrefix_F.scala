@@ -9,13 +9,12 @@ object _14_LongestCommonPrefix_F extends App:
 
     def longestCommonPrefix(strs: Array[String]): String = {
         strs.toList
-            .map(x => x.dropRight(x.length - strs.min.length).toList)
-            .transpose
-            .map(_.reduce((x, y) =>
-                if(x == y) x
-                else '-'
-            )).takeWhile(_ != '-')
-            .mkString
+            .reduce((x, y) =>
+                x.compareTo(y) match {
+                    case i if i > 0 => x.take(i)
+                    case _ => x
+                }
+            )
     }
 
-    println(longestCommonPrefix(Array("ia", "ia", "iaiiii")))
+    println(longestCommonPrefix(Array("i", "")))
