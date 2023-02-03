@@ -5,16 +5,14 @@ import scala.util.Random
 
 // https://leetcode.com/problems/longest-common-prefix/
 
-object _14_LongestCommonPrefix_F extends App:
+object _14_LongestCommonPrefix_F:
 
-    def longestCommonPrefix(strs: Array[String]): String = {
+    def longestCommonPrefix(strs: Array[String]) = {
         strs.toList
-            .reduce((x, y) =>
-                x.compareTo(y) match {
-                    case i if i > 0 => x.take(i)
-                    case _ => x
-                }
-            )
+            .map(_.padTo(strs.maxBy(_.length).length, "%"))
+            .transpose
+            .map(_.reduce((x, y) =>
+                if(x == y) x else '%'
+            )).takeWhile(_ != '%')
+            .mkString
     }
-
-    println(longestCommonPrefix(Array("i", "")))
