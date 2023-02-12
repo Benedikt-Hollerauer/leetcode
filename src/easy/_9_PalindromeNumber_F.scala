@@ -1,6 +1,12 @@
 package easy
 
-// https://leetcode.com/problems/palindrome-number/
+/**
+ * https://leetcode.com/problems/palindrome-number/
+ *
+ * Time: O(n)
+ *
+ * Space: O(n)
+ */
 
 object _9_PalindromeNumber_F:
 

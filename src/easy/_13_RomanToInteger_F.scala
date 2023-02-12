@@ -1,13 +1,16 @@
 package easy
 
-import scala.annotation.tailrec
-
-// https://leetcode.com/problems/roman-to-integer/
+/**
+ * https://leetcode.com/problems/roman-to-integer/
+ *
+ * Time: O(n)
+ *
+ * Space: O(n)
+ */
 
 object _13_RomanToInteger_F:
 
     def romanToInt(s: String): Int = {
-        @tailrec
         def helper(it: List[Int], acc: Int = 0): Int =
             it match {
                 case first :: Nil => acc + first

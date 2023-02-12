@@ -1,9 +1,12 @@
 package easy
 
-import scala.annotation.tailrec
-import scala.util.Random
-
-// https://leetcode.com/problems/longest-common-prefix/
+/**
+ * https://leetcode.com/problems/longest-common-prefix/
+ *
+ * Time: O(n²)
+ *
+ * Space: O(n)
+ */
 
 object _14_LongestCommonPrefix_F:
 

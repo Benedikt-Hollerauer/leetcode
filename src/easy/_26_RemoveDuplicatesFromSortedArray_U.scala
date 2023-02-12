@@ -1,6 +1,12 @@
 package easy
 
-// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+/**
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+ * 
+ * Time: O()
+ * 
+ * Space: O()
+ */
 
 object _26_RemoveDuplicatesFromSortedArray_U:
 

@@ -1,13 +1,16 @@
 package easy
 
-import scala.annotation.tailrec
-
-// https://leetcode.com/problems/valid-parentheses/
+/**
+ * https://leetcode.com/problems/valid-parentheses/
+ *
+ * Time: O(n)
+ *
+ * Space: O(n)
+ */
 
 object _20_ValidParentheses_F:
 
     def isValid(s: String): Boolean = {
-        @tailrec
         def helper(it: List[Char], stack: List[Char]): Boolean =
             it match {
                 case Nil if stack.isEmpty => true
