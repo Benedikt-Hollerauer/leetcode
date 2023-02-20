@@ -8,8 +8,17 @@ package medium
  * Space: O()
  */
 
-object _3_LongestSubstringWithoutRepeatingCharacters_C:
+object _3_LongestSubstringWithoutRepeatingCharacters_C extends App:
 
     def lengthOfLongestSubstring(s: String): Int = {
-        ???
+        s.toList
+            .map(_.toString)
+            .reduce((cSS, n) =>
+                if(cSS.contains(n)) cSS
+                else cSS + n
+            ).length
     }
+
+    println(
+        lengthOfLongestSubstring("pwwkew")
+    )
