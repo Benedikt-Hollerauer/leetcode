@@ -10,15 +10,11 @@ package medium
 
 object _3_LongestSubstringWithoutRepeatingCharacters_C extends App:
 
-    def lengthOfLongestSubstring(s: String): Int = {
-        s.toList
-            .map(_.toString)
-            .reduce((cSS, n) =>
-                if(cSS.contains(n)) cSS
-                else cSS + n
-            ).length
+    def lengthOfLongestSubstring(s: String) = {
+        s.zipWithIndex
+            .map((c, i) => )
     }
 
     println(
-        lengthOfLongestSubstring("pwwkew")
+        lengthOfLongestSubstring("dvdf")
     )
