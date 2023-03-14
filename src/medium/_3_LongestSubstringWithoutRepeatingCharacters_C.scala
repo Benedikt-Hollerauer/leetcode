@@ -12,9 +12,17 @@ object _3_LongestSubstringWithoutRepeatingCharacters_C extends App:
 
     def lengthOfLongestSubstring(s: String) = {
         s.zipWithIndex
-            .map((c, i) => )
+            .foldLeft(Map.empty[Char, Int]) {
+                case (x, y) if x.contains(y._1) && x(y._1) >= y._2 => x + y
+                case (x, y) => x + (y._1 -> y._2)
+            }
     }
 
-    println(
-        lengthOfLongestSubstring("dvdf")
-    )
+    List(
+        "dvdf",
+        "abcabcbb",
+        "bbbbb",
+        "pwwkew"
+    ).map(x =>
+        lengthOfLongestSubstring(x)
+    ).foreach(println)
