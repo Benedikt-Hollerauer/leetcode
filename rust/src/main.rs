@@ -3,7 +3,7 @@ fn main() {
 }
 
 pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-    let test = nums
+    nums
         .iter()
         .enumerate()
         .map(|(index_outer, value_outer)|
@@ -13,7 +13,7 @@ pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
                 .fold(
                     None,
                     |acc, (index_inner, value_inner)| {
-                        return if value_inner + value_outer == target {
+                        return if value_inner + value_outer == target && index_inner != index_outer {
                             Some(vec![index_inner as i32, index_outer as i32])
                         } else if acc.is_some() {
                             acc
@@ -22,9 +22,8 @@ pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
                         }
                     }
                 )
-        );
-    println!("{:?}", test.clone().collect::<Vec<_>>());
-    test.filter(|option| option.is_some())
+        )
+        .filter(|option| option.is_some())
         .take(1)
         .flat_map(|option| option.unwrap())
         .collect::<Vec<_>>()
